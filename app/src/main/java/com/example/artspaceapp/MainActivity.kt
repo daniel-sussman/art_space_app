@@ -158,11 +158,11 @@ fun nextArtwork(collectionIndex: Int, artworkIndex: Int): Int {
 }
 
 fun previousCollection(index: Int): Int {
-    return (index + collections().size - 1) % collections().size
+    return (index + collections.size - 1) % collections.size
 }
 
 fun nextCollection(index: Int): Int {
-    return (index + 1) % collections().size
+    return (index + 1) % collections.size
 }
 
 class Artwork(
@@ -172,70 +172,68 @@ class Artwork(
     public val image: Int
 ) {}
 
-private fun collections(): List<List<Artwork>> {
-    return listOf(
-        listOf(
-            Artwork(
-                R.string.cafe_terrace,
-                R.string.artist_van_gogh,
-                1888,
-                R.drawable.cafe_terrace_at_night
-            ),
-            Artwork(
-                R.string.bedroom_in_arles,
-                R.string.artist_van_gogh,
-                1888,
-                R.drawable.bedroom_in_arles
-            ),
-            Artwork(
-                R.string.the_old_mill,
-                R.string.artist_van_gogh,
-                1888,
-                R.drawable.the_old_mill
-            ),
-            Artwork(
-                R.string.the_yellow_house,
-                R.string.artist_van_gogh,
-                1888,
-                R.drawable.the_yellow_house
-            ),
-            Artwork(
-                R.string.the_olive_trees,
-                R.string.artist_van_gogh,
-                1889,
-                R.drawable.the_olive_trees
-            )
+private val collections = listOf(
+    listOf(
+        Artwork(
+            R.string.cafe_terrace,
+            R.string.artist_van_gogh,
+            1888,
+            R.drawable.cafe_terrace_at_night
         ),
-        listOf(
-            Artwork(
-                R.string.i_and_the_village,
-                R.string.artist_chagall,
-                1911,
-                R.drawable.i_and_the_village
-            ),
-            Artwork(
-                R.string.reclining_nude,
-                R.string.artist_chagall,
-                1911,
-                R.drawable.reclining_nude
-            ),
-            Artwork(
-                R.string.self_portrait_seven_fingers,
-                R.string.artist_chagall,
-                1913,
-                R.drawable.self_portrait_with_seven_fingers
-            ),
-            Artwork(
-                R.string.the_marketplace,
-                R.string.artist_chagall,
-                1917,
-                R.drawable.the_marketplace
-            ),
+        Artwork(
+            R.string.bedroom_in_arles,
+            R.string.artist_van_gogh,
+            1888,
+            R.drawable.bedroom_in_arles
+        ),
+        Artwork(
+            R.string.the_old_mill,
+            R.string.artist_van_gogh,
+            1888,
+            R.drawable.the_old_mill
+        ),
+        Artwork(
+            R.string.the_yellow_house,
+            R.string.artist_van_gogh,
+            1888,
+            R.drawable.the_yellow_house
+        ),
+        Artwork(
+            R.string.the_olive_trees,
+            R.string.artist_van_gogh,
+            1889,
+            R.drawable.the_olive_trees
         )
+    ),
+    listOf(
+        Artwork(
+            R.string.i_and_the_village,
+            R.string.artist_chagall,
+            1911,
+            R.drawable.i_and_the_village
+        ),
+        Artwork(
+            R.string.reclining_nude,
+            R.string.artist_chagall,
+            1911,
+            R.drawable.reclining_nude
+        ),
+        Artwork(
+            R.string.self_portrait_seven_fingers,
+            R.string.artist_chagall,
+            1913,
+            R.drawable.self_portrait_with_seven_fingers
+        ),
+        Artwork(
+            R.string.the_marketplace,
+            R.string.artist_chagall,
+            1917,
+            R.drawable.the_marketplace
+        ),
     )
-}
+)
 
-private fun artworks(collectionIndex: Int) = collections()[collectionIndex]
+private fun artworks(collectionIndex: Int) = collections[collectionIndex]
 
 @Composable
 fun TitleField(
