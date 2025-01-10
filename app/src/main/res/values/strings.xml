@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Art Space App</string>
+    <string name="artist_van_gogh">Vincent van Gogh</string>
+    <string name="artist_chagall">Marc Chagall</string>
+    <string name="cafe_terrace">Café Terrace at Night</string>
+    <string name="bedroom_in_arles">Bedroom in Arles</string>
+    <string name="the_old_mill">The Old Mill</string>
+    <string name="the_yellow_house">The Yellow House</string>
+    <string name="the_olive_trees">Olive Trees with the Alpilles in the Background</string>
+    <string name="i_and_the_village">I and the Village</string>
+    <string name="self_portrait_seven_fingers">Self-Portrait with Seven Fingers</string>
+    <string name="the_marketplace">The Marketplace, Vitebsk</string>
+    <string name="reclining_nude">Reclining Nude</string>
+</resources>
